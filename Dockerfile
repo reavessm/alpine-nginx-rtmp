@@ -1,6 +1,7 @@
-FROM nginx:stable-alpine
-
-RUN apk add --no-cache ffmpeg nginx-mod-rtmp stunnel
+FROM alfg/nginx-rtmp
 
 EXPOSE 1935
-EXPOSE 19350
+EXPOSE 8080
+EXPOSE 8081
+
+CMD nginx
